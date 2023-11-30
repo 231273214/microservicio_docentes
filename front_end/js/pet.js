@@ -13,7 +13,7 @@ $(document).ready(() => {
         const form = document.forms['pruebaFrom'];
         const nombre = form['nombre'].value;
         $.ajax({
-            url: 'http://127.0.0.1:8081/estudiantes',
+            url: 'http://127.0.0.1:8081/docentes',
             method: 'post',
             data: { nombre: nombre, email: 'pepe@test.test', telefono: '12345' }
         }).done((response) => {
@@ -25,7 +25,7 @@ $(document).ready(() => {
 
     function loadEstudiantes() {
         $.ajax({
-            url: 'http://127.0.0.1:8081/estudiantes',
+            url: 'http://127.0.0.1:8081/docentes',
             method: 'get'
         }).done((response) => {
             estudiantes = [...response];
