@@ -17,7 +17,12 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('docentes','docentesController@index');
-$router->post('docentes','docenteController@store');
-$router->put('estudiantes/{id}','EstudianteController@update');
-$router->delete('estudiantes/{id}','EstudianteController@destroy');
+$router->get('Docente','docentesController@index');
+$router->post('Docente','docenteController@store');
+$router->put('Docente/{id}','docenteController@update');
+$router->delete('Docente/{id}','docenteController@destroy');
+
+$router->get('Ocupaciones','docentesController@index');
+$router->post('Ocupaciones','docenteController@store');
+$router->put('Ocupaciones/{id}','docenteController@update');
+$router->delete('/{id}','docenteController@destroy');
