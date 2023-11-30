@@ -17,12 +17,7 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('index', 'EstudiantesController@index');
-$router->get('actividades/{id}', 'ActividadesController@show');
-$router->get('estudiante/{id}', 'EstudiantesController@getStudent');
-$router->get('actividad/{id}', 'ActividadesController@getActivity');
-$router->post('create', 'EstudiantesController@store');
-$router->post('create-grade', 'ActividadesController@store');
-$router->delete('delete/{id}', 'EstudiantesController@destroy');
-$router->delete('delete-grade/{id}', 'ActividadesController@destroy');
-$router->put('actividades/update/{id}', 'ActividadesController@update');
+$router->get('docentes','docentesController@index');
+$router->post('docentes','docenteController@store');
+$router->put('estudiantes/{id}','EstudianteController@update');
+$router->delete('estudiantes/{id}','EstudianteController@destroy');
