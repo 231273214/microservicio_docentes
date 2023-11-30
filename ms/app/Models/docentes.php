@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class docentes extends Model
+class Docente extends Model
 {
-    //
+    protected $table = 'docentes';
+    protected $fillable = ['nombre', 'idOcupacion', 'cod'];
 }
